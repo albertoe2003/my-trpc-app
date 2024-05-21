@@ -18,3 +18,18 @@ model User {
   email String  @unique
   name  String?
 }
+
+model Documento {
+  id               String    @id @default(cuid())
+  nombre           String
+  type             String
+  path             String 
+  legajo           String
+  periodo          Int
+  liquidacion      Int
+  ano              Int
+  
+  createdAt        DateTime            @default(now())
+  updatedAt        DateTime            @updatedAt
+  
+}
